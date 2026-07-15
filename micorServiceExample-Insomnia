@@ -1,0 +1,141 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1784105494291
+  modified: 1784105494291
+  description: ""
+collection:
+  - name: MicroserviceExample
+    meta:
+      id: fld_2c321e8cecd547e9a29755e1d6130b4c
+      created: 1784113202920
+      modified: 1784113202920
+      sortKey: -1784113202920
+      description: ""
+    children:
+      - url: http://localhost:8082/api/inventory
+        name: CreateInventory
+        meta:
+          id: req_9a5c4b1383834981a1f44ddd92e454b1
+          created: 1784109137930
+          modified: 1784113218765
+          isPrivate: false
+          description: ""
+          sortKey: -1784113212924
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "productId": 101,
+                "productName": "Laptop",
+                "totalQuantity": 100
+              }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8082/api/inventory/101/check?requiredQuantity=10
+        name: CheckStock
+        meta:
+          id: req_1852acccfc954801be733b877db42018
+          created: 1784109223268
+          modified: 1784113222272
+          isPrivate: false
+          description: ""
+          sortKey: -1784113212874
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: " http://localhost:8081/api/orders "
+        name: CreateOrder
+        meta:
+          id: req_9763d48a4a624e58acbdc49bf6cb03b3
+          created: 1784109257709
+          modified: 1784113224264
+          isPrivate: false
+          description: ""
+          sortKey: -1784113212849
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"productId": 101,
+            	"quantity": 5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/api/orders/1
+        name: GetOrder
+        meta:
+          id: req_f9c4f7b84e9c4644be5294fd9cc53971
+          created: 1784109537219
+          modified: 1784113217405
+          isPrivate: false
+          description: ""
+          sortKey: -1784113212824
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1784105543131
+    modified: 1784105543131
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1784105543128
+    modified: 1784105543128
+    isPrivate: false
