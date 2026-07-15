@@ -50,7 +50,8 @@ This project demonstrates all these concepts in a real-world scenario.
 ## System Architecture
 
 ### High-Level 
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/ca13ab7f-63d0-4ba5-bea8-cd104e337779" />
+<img width="1408" height="768" alt="Gemini_Generated_Image_bh3xudbh3xudbh3x" src="https://github.com/user-attachments/assets/76c3f313-de79-43f8-a00a-a51a94f46675" />
+
 
 
 ### Workflow: Creating an Order
