@@ -4,7 +4,6 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-green?logo=spring)](https://spring.io/projects/spring-boot)
 [![Kafka](https://img.shields.io/badge/Apache%20Kafka-7.5.0-red?logo=apache-kafka)](https://kafka.apache.org/)
 [![Docker](https://img.shields.io/badge/Docker-29.6.1-blue?logo=docker)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 
 
