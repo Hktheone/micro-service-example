@@ -50,54 +50,9 @@ This project demonstrates all these concepts in a real-world scenario.
 
 ## System Architecture
 
-### High-Level Diagram
-┌─────────────────────────────────────────────────────────────┐
-│                         CLIENT                              │
-│                   (Browser/API Client)                      │
-└────────────────────────┬────────────────────────────────────┘
-│
-│ HTTP Requests
-▼
-┌─────────────┐
-│   NGINX     │  Port 80
-│  Gateway    │  (Reverse Proxy & Load Balancer)
-└──────┬──────┘
-│
-┌──────────────────┼──────────────────┐
-│                  │                  │
-│                  │                  │
-┌────▼────┐        ┌────▼──────┐    ┌─────▼──────┐
-│  Order  │        │ Inventory │    │ Prometheus │
-│ Service │        │  Service  │    │  Metrics   │
-│ :8081   │        │  :8082    │    │  :9090     │
-└────┬────┘        └────┬──────┘    └────────────┘
-│                  │
-│   ┌──────────────┘
-│   │
-│   │  Service-to-Service
-│   │  Communication (REST)
-│   │
-└───┴─────────────────────┐
-│
-┌────────▼────────┐
-│     KAFKA       │
-│  Message Broker │
-│     :9092       │
-│                 │
-│ order-created   │
-│ topic           │
-└────┬────────────┘
-│
-│ Events
-▼
-┌──────────────────────┐
-│   Shared Database    │
-│    PostgreSQL        │
-│     :5432            │
-│                      │
-│  order_db            │
-│  inventory_db        │
-└──────────────────────┘
+### High-Level 
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/ca13ab7f-63d0-4ba5-bea8-cd104e337779" />
+
 
 ### Workflow: Creating an Order
 
