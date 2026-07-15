@@ -794,23 +794,6 @@ curl -X DELETE http://localhost/orders/1
 - **Services** - Business logic orchestration
 - **Events** - OrderCreatedEvent for domain events
 
-### Clean Architecture
-┌─────────────────────────────────────────┐
-│          Presentation Layer             │
-│     (Controller, REST Endpoints)        │
-├─────────────────────────────────────────┤
-│           Business Logic Layer          │
-│      (Service, Use Cases)               │
-├─────────────────────────────────────────┤
-│        Persistence Layer                │
-│    (Repository, ORM, Database)          │
-├─────────────────────────────────────────┤
-│      Infrastructure Layer               │
-│   (Kafka, Nginx, Docker)                │
-└─────────────────────────────────────────┘
-
----
-
 ## Conclusion
 
 This project demonstrates a **professional, enterprise-grade microservices architecture** using:
