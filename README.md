@@ -14,14 +14,13 @@ Mrkdown# Microservices Architecture with Kafka, Nginx, and Java 21
 1. [Project Overview](#project-overview)
 2. [System Architecture](#system-architecture)
 3. [Technology Stack](#technology-stack)
-4. [Project Structure](#project-structure)
-5. [Setup Instructions](#setup-instructions)
-6. [API Endpoints](#api-endpoints)
-7. [Kafka Event Flow](#kafka-event-flow)
-8. [Docker Compose Setup](#docker-compose-setup)
-9. [Running the Project](#running-the-project)
-10. [Testing](#testing)
-11. [Troubleshooting](#troubleshooting)
+4. [Setup Instructions](#setup-instructions)
+5. [API Endpoints](#api-endpoints)
+6. [Kafka Event Flow](#kafka-event-flow)
+7. [Docker Compose Setup](#docker-compose-setup)
+8. [Running the Project](#running-the-project)
+9. [Testing](#testing)
+10. [Troubleshooting](#troubleshooting)
 12. [Key Features](#key-features)
 
 ---
@@ -165,68 +164,6 @@ Can trigger shipment, notifications, etc.
 - **Prometheus** - Monitoring & alerting
 - **Validation API** - Input validation
 
----
-
-## Project Structure
-microservices-project/
-│
-├── order-service/                          # Service 1
-│   ├── pom.xml                             # Maven dependencies
-│   ├── src/main/
-│   │   ├── java/com/microservices/order/
-│   │   │   ├── OrderServiceApplication.java
-│   │   │   ├── controller/
-│   │   │   │   └── OrderController.java
-│   │   │   ├── service/
-│   │   │   │   └── OrderService.java
-│   │   │   ├── domain/
-│   │   │   │   └── Order.java
-│   │   │   ├── dto/
-│   │   │   │   └── OrderDTOs.java
-│   │   │   ├── repository/
-│   │   │   │   └── OrderRepository.java
-│   │   │   ├── client/
-│   │   │   │   └── InventoryServiceClient.java
-│   │   │   ├── kafka/
-│   │   │   │   └── OrderEventProducer.java
-│   │   │   └── exception/
-│   │   │       ├── Exceptions.java
-│   │   │       └── GlobalExceptionHandler.java
-│   │   └── resources/
-│   │       └── application.yml
-│   └── target/
-│
-├── inventory-service/                      # Service 2
-│   ├── pom.xml
-│   ├── src/main/
-│   │   ├── java/com/microservices/inventory/
-│   │   │   ├── InventoryServiceApplication.java
-│   │   │   ├── controller/
-│   │   │   │   └── InventoryController.java
-│   │   │   ├── service/
-│   │   │   │   └── InventoryService.java
-│   │   │   ├── domain/
-│   │   │   │   └── ProductInventory.java
-│   │   │   ├── dto/
-│   │   │   │   └── InventoryDTOs.java
-│   │   │   ├── repository/
-│   │   │   │   └── InventoryRepository.java
-│   │   │   ├── kafka/
-│   │   │   │   └── OrderEventConsumer.java
-│   │   │   └── exception/
-│   │   │       ├── Exceptions.java
-│   │   │       └── GlobalExceptionHandler.java
-│   │   └── resources/
-│   │       └── application.yml
-│   └── target/
-│
-├── docker-compose.yml                      # Infrastructure orchestration
-├── init-db.sql                             # Database initialization
-├── nginx.conf                              # Nginx configuration
-├── prometheus.yml                          # Metrics configuration
-└── README.md                               # This file
-
----
 
 ## Setup Instructions
 
